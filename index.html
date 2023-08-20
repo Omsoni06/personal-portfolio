@@ -1,0 +1,813 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>codesera| OM SONI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8SEGDSK9CG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8SEGDSK9CG');
+</script>
+
+<body>
+    <!-- ---------------------------------------- Loading Placeholder ----------------------------------------- -->
+    <div id="loading-page">
+        <div class="loading--wrapper">
+            <div class="spinner-grow text-primary bg-black"></div>
+        </div>
+    </div>
+    <template id="loading-mask">
+        <div class="loading--wrapper">
+            <div class="spinner-grow text-primary bg-black"></div>
+        </div>
+    </template>
+    <!-----------------------------------------------  Intro  ---------------------------------------------------->
+    <nav class="top--navbar">
+        <div class="nav--items">
+            <nav class="mobile--nav" id="mobile-nav-id">
+                <div class="row w-100">
+                    <div class="float-left w-50">
+                        <ul class="mobile-menu" aria-labelledby="expandMenu" role="menu">
+                            <li><a data-active="false" onclick="intro()" id="mobile-menu-intro">intro.</a></li>
+                            <li><a data-active="false" onclick="projects()" id="mobile-menu-projects">projects.</a></li>
+                            <li><a data-active="false" onclick="about()" id="mobile-menu-about">about me.</a></li>
+                            <li><a data-active="false" onclick="contact()" id="mobile-menu-contact">contact.</a></li>
+                            <li><a data-active="false" onclick="downloads()" id="mobile-menu-downloads">resume.</a></li>
+
+                            </li>
+                            <li>
+                                <a href='https://us24updates.com/' data-active="false" target="_blank"
+                                    id="mobile-menu-blog" class="m-sm-3" style="text-decoration: none;">
+                                    <span>blog.</span>
+                                    <span id="blog--link-arrow"><i class="fas fa-arrow-right"></i></span>
+                                </a>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                    <div class="float-right w-50">
+                        <div class="mobile-right-side-menu">
+
+                            <span class="home--nav-link-mobile">
+                                <a href="https://us24updates.com/">us24updates.com</a>
+                            </span>
+                            <div class="theme-switch-container">
+                                <div class="switch" onclick="toggleTheme()" id="theme-switch-id-mobile">
+                                    <img height="26" width="26" src="assets/icon/icons8-sun-30.png"
+                                        id="mobile-light-theme-icon-id" />
+                                    <img height="26" width="26" src="assets/icon/icons8-moon-symbol-48.png"
+                                        id="mobile-dark-theme-icon-id" />
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="home--links" class="res--links align-middle m-1 p-1">
+                <span class="home--nav-link">
+                    <a href="index.html">
+                        <img class="img-fluid" src="assets/img/graphics/undraw_developer_activity_re_39tg-REDHAIR.svg"
+                            alt="nav-bar-home-icon">
+                    </a></span>
+
+                <a data-active="false" onclick="intro()" class="m-sm-3" id="nav-menu-intro">intro.</a>
+                <a data-active="false" onclick="projects()" class="m-sm-3" id="nav-menu-projects">projects.</a>
+                <a data-active="false" onclick="about()" class="m-sm-3" id="nav-menu-about">about me.</a>
+                <a data-active="false" onclick="contact()" class="m-sm-3" id="nav-menu-contact">contact.</a>
+                <a data-active="false" onclick="downloads()" class="m-sm-3" id="nav-menu-downloads">
+                    resume.
+                </a>
+                <a href='https://us24updates.com/' data-active="false" target="_blank" id="nav-menu-blog" class="m-sm-3"
+                    style="text-decoration: none;">
+                    <span>blog.</span>
+                    <span id="blog--link-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+                <span class="ml-5">
+                    <div class="theme-switch-container">
+                        <div class="switch" onclick="toggleTheme()" id="theme-switch-id">
+                            <img height="26" width="26" src="assets/icon/icons8-sun-30.png"
+                                id="fs-light-theme-icon-id" />
+                            <img height="26" width="26" src="assets/icon/icons8-moon-symbol-48.png"
+                                id="fs-dark-theme-icon-id" />
+                        </div>
+                    </div>
+                </span>
+                <div class="float-right align-middle social--full">
+                    <a href="https://github.com/Omsoni06" target="_blank" class="fork-on-github"><img
+                            src="assets/icon/fork-me-on-github.png" alt="fork me on github icon"></a>
+                    <a class="social--link" href="https://github.com/Omsoni06" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a class="social--link" href="https://www.linkedin.com/in/omsoni06/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a class="social--link" href="https://leetcode.com/omsonii06/" target="_blank">
+                        <i class="fa fa-code"></i>
+                    </a>
+                    <a class="social--link" href="https://www.instagram.com/om__5911/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="social--link" href="https://stackoverflow.com/users/15150189/om-soni" target="_blank">
+                        <i class="fab fa-stack-overflow"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile--title float-right ml-5" style="margin-top: 9px; margin-bottom: 6px;">
+                <a class="m-1 p-1" href="https://github.com/Omsoni06" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="m-1 p-1" href="https://www.linkedin.com/in/omsoni06/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a class="m-1 p-1" href="https://leetcode.com/omsonii06/" target="_blank">
+                    <i class="fa fa-code"></i>
+                </a>
+                <a class="m-1 p-1" href="https://www.instagram.com/om__5911/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="m-1 mr-3 p-1" href="https://stackoverflow.com/users/15150189/om-soni" target="_blank">
+                    <i class="fab fa-stack-overflow"></i>
+                </a>
+            </div>
+
+            <!-- ----------------------- Mobile Menu Expand Bar --------------------------------- -->
+            <div class="mobile-nav-toggle float-left">
+                <div id="mobile-nav-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-container" id="parent-container">
+        <!--------------------------------------- body Intro ------------------------------------------->
+        <template id="intro-page">
+            <div class="intro--wrapper">
+                <div class="intro">
+                    <div class="container">
+                        <div class="row w-100 m-0 p-0">
+                            <div class="col-lg-4 col-md-3">
+                                <div class="intro--image">
+                                    <img class="img-fluid"
+                                        src="assets/img/graphics/undraw_developer_activity_re_39tg-REDHAIR.svg"
+                                        alt="welcome-img">
+                                </div>
+                            </div>
+                            <div id="intro-message-body" class="col-lg-8 col-md-9">
+                                <p>
+                                    <span class="ex-large-text">Hi! </span>
+                                    <span class="med-large-text text-nowrap">I'm Om Soni,</span> <br>
+                                    <span class="med-med-text">
+                                        Full stack developer | MERN - MongoDB,Expess,React,Node.js
+
+                                    </span><br><br>
+                                    <span class="med-main-message-text">
+                                        I am a self taught Full stack developer having hands-on experience with MERN
+                                        stack
+                                        MongoDB || Express || React || Node.js ||
+                                        and couple understanding of essential libraries such as
+                                        •Redux •Material UI •Framer-motion and •Socket.io •Mongoose
+                                        I'm also well-versed in (Git & Github) and always looking for open source
+                                        contribution to master the art of collaborative coding and looking forward to
+                                        building more complex projects and developing my skillset.
+
+                                        I'm excited to build modern, functional, and visually appealing, optimized site
+                                        and ready to take on new challenges and be a part of a team that builds
+                                        innovative web application
+                                    </span><br><br>
+                                </p>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <main class="main--body">
+            <!-----------------------------------------------------------  Projects  ---------------------------------------------------------->
+            <template id="projects-page">
+                <section class="projects--wrapper">
+                    <div class="container">
+                        <div class="row justify-content-center align-items-center w-100" style="margin-bottom: 6vw">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <h2 class="text-center section--header">
+                                    projects.</h2>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <div class="text-center projects--scroll-help-image">
+                                    <img src="assets/img/graphics/undraw_mobile_development_re_wwsn.svg"
+                                        alt="img-projects-illustration">
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!------------------------------------------------ Tars-ai ---------------------------------------------------->
+                        <div class="row p-2 project--card">
+                            <div class="col-md-7">
+                                <img alt="Pfolie logo" class="project--image img-fluid mb-3 mb-md-0"
+                                    id="coinPortalImage" src="assets/img/Tarss.png">
+                            </div>
+                            <div class="col-md-5">
+                                <h3>Tars-Ai</h3>
+                                <h6 class="project--sub-text">Creator, Developer, Designer, Maintainer</h6>
+                                <h5>Ai chat bot using Open.ai api </h5>
+                                <div class="d-inline-block mt-1 mb-1 p-2">
+                                    <div class="badge">Html</div>
+                                    <div class="badge">Css</div>
+                                    <div class="badge">Vanilla JavaScript</div>
+                                    <div class="badge">Express.js</div>
+                                    <div class="badge">Node.js</div>
+                                    <div class="badge">Vite</div>
+                                    <div class="badge">Open Ai</div>
+                                    <div class="badge">render</div>
+                                </div>
+                                <div class="project--link">
+                                    <a type="button" class="text-white btn btn-primary" target="_blank"
+                                        href="https://tars-ai-henna.vercel.app/">
+                                        <span class="launch-btn-text">Launch App</span> <i class="fa fa-rocket"></i>
+                                    </a>
+                                    <a type="button" target="_blank" class="btn btn-light"
+                                        href="https://github.com/Omsoni06/Tars-Ai"> <span
+                                            class="code-btn-text">Code</span> <i class="fas fa-code-branch"></i>
+                                    </a>
+                                </div>
+
+                                <!-- <div
+                                    class="project--stats mt-1"
+                                    id="pfolie-app-stats"
+                                >
+                                    <br>
+                                    <div class="container-fluid git-stats-label-text">
+                                        <div class="row text-center justify-content-center">
+                                            GitHub Stats
+                                        </div>
+                                        <div class="row text-center">
+                                            <div class="col">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <img
+                                                            alt="stargazers-icon"
+                                                            src="assets/icon/stargazer-icon.svg"
+                                                        />
+                                                        <div
+                                                            class="p-1"
+                                                            id="pfolie-stars"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="container">
+                                                    <div class="row justify-content-center">
+                                                        <i class="fas fa-code-branch pt-2"></i>
+                                                        <div
+                                                            class="p-1"
+                                                            id="pfolie-forks"
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row text-center">
+                                            <div class="container">
+                                                <div class="row justify-content-center">
+                                                    <div style="font-size: x-small">Updated:</div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div
+                                                        class="git-stats-datetime"
+                                                        style="font-size: x-small"
+                                                    ></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row text-center justify-content-center git-stats-datetime">
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <hr>
+                        <hr>
+                        <!------------------------------------------------ Crypto tracker ---------------------------------------------------->
+                        <div class="row p-2 project--card">
+                            <div class="col-md-7">
+                                <img alt="Secret Towns Home Page Screenshot image"
+                                    class="project--image img-fluid mb-3 mb-md-0" id="secretTownsDotComImg"
+                                    src="assets/img/homepage.png">
+                            </div>
+                            <div class="col-md-5">
+                                <h3>Crypto Tracker</h3>
+                                <h6 class="project--sub-text">Developer, Programmer, Maintainer</h6>
+                                <h5>Crypto tracker Web-app that show crypto currency price according to market-cap and
+                                    shows the historical chart for particular coin
+                                </h5>
+                                <div class="d-inline-block mt-1 mb-1 p-2">
+                                    <div class="badge">JavaScript</div>
+                                    <div class="badge">React.js</div>
+                                    <div class="badge">Context API</div>
+                                    <div class="badge">Chart.js</div>
+                                    <div class="badge">Material UI</div>
+                                    <div class="badge">Firebase</div>
+
+                                </div>
+                                <div class="project--link">
+                                    <a type="button" class="text-white btn btn-primary" target="_blank"
+                                        href="https://www.secrettowns.com">
+                                        <span class="launch-btn-text">Launch App</span> <i class="fa fa-rocket"></i>
+                                    </a>
+                                    <a type="button" target="_blank" class="btn btn-light"
+                                        href="https://github.com/Omsoni06/Crypto-tracker"> <span
+                                            class="code-btn-text">Code</span> <i class="fas fa-code-branch"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <hr>
+                        <!----------------------------------------- portfolio project ------------------------------------------->
+                        <div class="row p-2 project--card">
+                            <div class="col-md-7">
+                                <img class="project--image img-fluid mb-3 mb-md-0" src="assets/img/portfolioimg.png"
+                                    alt="harrydulaney.com project img">
+                            </div>
+                            <div class="col-md-5">
+                                <h3>Personal Portfolio</h3>
+                                <h6 class="project--sub-text">Creator, Designer, Programmer, Maintainer</h6>
+                                <h5>Personal Portfolio website for showcase skills and projects</h5>
+                                <div class="d-inline-block mt-1 mb-1 p-2">
+                                    <div class="badge">HTML</div>
+                                    <div class="badge">CSS</div>
+                                    <div class="badge">JavaScript</div>
+                                    <div class="badge">Bootstrap</div>
+                                    <div class="badge">JQuery</div>
+                                    <div class="badge">Three.js</div>
+                                    <div class="badge">GreenSock</div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <a type="button" class="text-white btn btn-primary" target="_blank" href="#">
+                                        <span class="launch-btn-text">Launch App</span> <i class="fa fa-rocket"></i>
+                                    </a>
+                                    <a target="_blank" class="btn btn-light" href="#"> <span
+                                            class="code-btn-text">Code</span> <i class="fas fa-code-branch"></i>
+                                    </a>
+                                </div>
+                                <div class="project--stats mt-1" id="harrydulaney-com-stats">
+                                    <br>
+
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+
+                        <!-- --------------------------------  Expand Projects Section   -------------------------------- -->
+                        <div class="col-12 mb-5">
+                            <button class="btn btn-primary w-100 text-white font-weight-bold" id="expandProjectsBtn"
+                                onclick="toggleExpandProjects()">Show more projects...
+                            </button>
+                        </div>
+                        <div class="hide--h" data-expanded="false" id="more-projects-wrapper">
+
+
+                            <!------------------------------------- contiue from here to add more projects-------------------------------------------->
+                            <hr>
+
+                        </div>
+                    </div>
+                </section>
+            </template>
+            <!-----------------------------------------------  About Me  ---------------------------------------------------->
+            <template id="about-me-page">
+                <section class="about--wrapper">
+                    <div class="about about-me-bg-overlay">
+                        <div class="about--banner">
+                            <div class="container">
+                                <div class="container mt-5">
+                                    <div class="row d-flex justify-content-center">
+                                        <div class="col-xl-6 col-lg-6 col-md-12">
+                                            <h2 class="section--header">
+                                                about me.
+                                            </h2>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-12">
+                                            <div class="about--scroll-help-image">
+                                                <img src="assets/img/graphics/undraw_progressive_app_m-9-ms.svg"
+                                                    alt="about--me-scroll-helper-dev-guy">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row w-100 m-1 p-1">
+                                    <div class="col-md-4">
+                                        <div class="banner--image">
+                                            <img class="img-fluid" src="assets/img/personalpic.png"
+                                                alt="about-me-harry-img" width="504" height="495">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <span class="about-me-content-body">
+                                            <p class="new-paragraph">
+                                                My passion for learning is huge and I am always interested in
+                                                opportunities
+                                                to grow and share experience. When I'm not building project ideas, I
+                                                love
+                                                reading self growth books, travelling , speding quality time with my
+                                                love one's
+
+                                            </p>
+                                            <p class="new-paragraph">
+                                                I am a self taught Full stack developer having hands-on experience with
+                                                MERN stack
+                                                MongoDB || Express || React || Node.js ||
+                                                and couple understanding of essential libraries such as
+                                                •Redux •Material UI •Framer-motion and •Socket.io •Mongoose
+                                                I'm also well-versed in (Git & Github) and always looking for open
+                                                source contribution to master the art of collaborative coding and
+                                                looking forward to building more complex projects and developing my
+                                                skillset.
+
+                                                I'm excited to build modern, functional, and visually appealing,
+                                                optimized site and ready to take on new challenges and be a part of a
+                                                team that builds innovative web applications.
+
+                                            </p>
+                                            <p class="new-paragraph"> My greatest strengths are an enthusiasm for
+                                                learning
+                                                new things and a
+                                                methodical approach to technical problem solving.</p>
+                                        </span><br><br>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="about--options">
+                            <a
+                                target="_blank"
+                                href="https://secrettownsband.bandcamp.com/"
+                            >
+                                <h3>Music</h3>
+                            </a>
+                            <a
+                                target="_blank"
+                                href="https://www.github.com/harrydulaney"
+                            >
+                                <h3><span class="code-btn-text">Code</span></h3>
+                            </a>
+                            <a
+                                target="_blank"
+                                href="https://meritpages.com/HarryDulaney"
+                            >
+                                <h3>Education</h3>
+                            </a>
+                            <a
+                                target="_blank"
+                                href="https://www.youracclaim.com/badges/05eb6d6a-ab34-4a36-b70e-e43f9f242a75/linked_in_profile"
+                            >
+                                <h3>Java Certification</h3>
+                            </a>
+                            <a
+                                target="_blank"
+                                href="https://www.linkedin.com/in/harrydulaney"
+                            >
+                                <h3>Professional</h3>
+                            </a>
+
+                        </div> -->
+
+                        <!-- Top Skills -->
+                        <section class="section skills" id="skills">
+                            <div class="container">
+                                <div class="row section-title justify-content-between">
+                                    <h2>0</h2>
+                                    <h2>Top Skills</h2>
+                                    <h2>5+</h2>
+                                </div>
+                                <ul class="skills-list">
+                                    <li class="skills-item" id="web-dev-skill-exp-elapsed">
+                                        <div class="wrapper" data-years="0">
+                                            <h3 class="skills-title">Web Development</h3>
+
+                                            <data class="skills-data"></data>
+                                        </div>
+
+                                        <div class="skills-progress-box">
+                                            <div class="skills-progress" data-years="0"></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="skills-item" id="js-skill-exp-elapsed">
+                                        <div class="wrapper" data-years="0">
+                                            <h3 class="skills-title">JavaScript</h3>
+
+                                            <data class="skills-data"></data>
+                                        </div>
+
+                                        <div class="skills-progress-box">
+                                            <div class="skills-progress" data-years="0"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skills-item" id="java-skill-exp-elapsed">
+                                        <div class="wrapper" data-years="0">
+                                            <h3 class="skills-title">Java</h3>
+                                            <data class="skills-data"></data>
+                                        </div>
+                                        <div class="skills-progress-box">
+                                            <div class="skills-progress" data-years="0"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skills-item" id="spring-skill-exp-elapsed">
+                                        <div class="wrapper" data-years="0">
+                                            <h3 class="skills-title">React.js</h3>
+
+                                            <data class="skills-data"></data>
+                                        </div>
+
+                                        <div class="skills-progress-box">
+                                            <div class="skills-progress" data-years="0"></div>
+                                        </div>
+                                    </li>
+
+
+                                    <li class="skills-item" id="angular-skill-exp-elapsed">
+                                        <div class="wrapper" data-years="0">
+                                            <h3 class="skills-title">Node.js</h3>
+
+                                            <data class="skills-data"></data>
+                                        </div>
+
+                                        <div class="skills-progress-box">
+                                            <div class="skills-progress" data-years="0"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skills-item" id="rest-apis-skill-exp-elapsed">
+                                        <div class="wrapper" data-years="0">
+                                            <h3 class="skills-title">DSA</h3>
+                                            <data class="skills-data"></data>
+                                        </div>
+
+                                        <div class="skills-progress-box">
+                                            <div class="skills-progress" data-years="0"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skills-item" id="microservice-skill-exp-elapsed">
+                                        <div class="wrapper" data-years="0">
+                                            <h3 class="skills-title">MongoDB</h3>
+
+                                            <data class="skills-data"></data>
+                                        </div>
+
+                                        <div class="skills-progress-box">
+                                            <div class="skills-progress" data-years="0"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skills-item" id="azure-skill-exp-elapsed">
+                                        <div class="wrapper" data-years="0">
+                                            <h3 class="skills-title">Git</h3>
+
+                                            <data class="skills-data"></data>
+                                        </div>
+
+                                        <div class="skills-progress-box">
+                                            <div class="skills-progress" data-years="0"></div>
+                                        </div>
+                                    </li>
+
+                                    <li class="skills-item" id="k8-skill-exp-elapsed">
+                                        <div class="wrapper" data-years="0">
+                                            <h3 class="skills-title">Github</h3>
+
+                                            <data class="skills-data"></data>
+                                        </div>
+
+                                        <div class="skills-progress-box">
+                                            <div class="skills-progress" data-years="0"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </section>
+                    </div>
+
+                </section>
+            </template>
+            <!-----------------------------------------------  Resume/ Downloads ---------------------------------------------------->
+            <template id="downloads-page">
+                <div class="download--wrapper">
+                    <div class="w-100 align-content-center text-center ml-1">
+                        <div class="container downloads-heading-wrapper">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-xl-6 col-lg-6 col-md-12">
+                                    <h2 class="section--header">
+                                        downloads.
+                                    </h2>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-12">
+                                    <div class="row p-1 text-center" style="height: fit-content;">
+                                        <div class="downloads--scroll-help-image">
+                                            <img src="assets/img/graphics/undraw_resume_re_hkth.svg"
+                                                alt="img-about-dec-1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="downloads">
+                            <div class="row p-5 w-100 align-content-center text-center ml-1">
+                                <a id="resume--download-link" href="#" type="application/pdf" class="download--image"
+                                    disabled>
+                                    <img src="assets/img/resume_icon_img.png" alt="Om soni Resume" width="164"
+                                        height="205" style="cursor: pointer" />
+                                    <i class="fas fa-window-close" id="resume--download-icon"></i>
+
+                                </a>
+                            </div>
+                            <br>
+
+                            <div class="row">
+                                <script async src="https://www.google.com/recaptcha/api.js"></script>
+                                <div class="g-recaptcha" data-theme="dark"
+                                    data-sitekey="6LecntgZAAAAABpmuLYOrT9mYo6i2lW6wpyDn-rn"
+                                    data-callback="enableResumeDownloadButton"
+                                    data-expired-callback="disableResumeDownloadButton"></div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+            </template>
+            <!-----------------------------------------------  Contact  ---------------------------------------------------->
+            <template id="contact-page">
+                <!-- Contact Section -->
+                <section class="contact--wrapper">
+                    <div class="background-cover-art">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <h2>contact.</h2>
+                            </div>
+                            <div class="row justify-content-center p-2">
+                                <div class="w-100 ms-2 me-2">
+                                    <div id="contact-form-status-alert">
+                                        <span class="close--btn"
+                                            onclick="javascript:closeContactFormStatusAlert();">&times;</span>
+                                        Success, your message was received! I'll get back to you as soon as
+                                        possible.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center p-2">
+                                <div class="w-100 ms-2 me-2">
+                                    <div id="contact-form-status-alert-error">
+                                        <span class="close--btn"
+                                            onclick="javascript:closeContactFormStatusAlert();">&times;</span>
+                                        Something went wrong! Please try again later.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- -------------------------- Contact Form ---------------------- -->
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 col-xl-7">
+                                    <form id="contact-form" action="https://formspree.io/xbjzadpn" method="POST">
+                                        <!-- Name input-->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="name" name="name" type="text"
+                                                placeholder="Enter your name..." required />
+                                            <label class="contact-form-label-text" for="name">Full name</label>
+                                        </div>
+                                        <!-- Email address input-->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="email" name="_replyto" type="email"
+                                                placeholder="name@example.com" required />
+                                            <label class="contact-form-label-text" for="email">Email address</label>
+                                        </div>
+                                        <!-- subject input-->
+                                        <input type="hidden" name="_subject" id="subject"
+                                            value="Contact Form Submission">
+                                        <!-- Message input-->
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="message" name="message"
+                                                placeholder="Enter your message here..." required></textarea>
+                                            <label class="contact-form-label-text" for="message">Message</label>
+                                        </div>
+                                        <br>
+
+                                        <div class="row">
+                                            <script async src="https://www.google.com/recaptcha/api.js"></script>
+                                            <div class="g-recaptcha" data-theme="dark"
+                                                data-sitekey="6LecntgZAAAAABpmuLYOrT9mYo6i2lW6wpyDn-rn"
+                                                data-callback="enableSubmitButton"
+                                                data-expired-callback="disableSubmitButton"></div>
+                                        </div>
+                                        <br>
+                                        <div class="d-flex justify-content-center mt-2">
+                                            <div class="form-button ml-2">
+                                                <!-- ---------------------------------- Visable Submit Button -------------------------------- -->
+                                                <input type="submit" value="Submit" id="submit-button-contact-form"
+                                                    for="contact-form" class="btn btn-primary btn-xl" disabled>
+                                            </div>
+
+                                        </div>
+                                </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </template>
+        </main>
+    </div>
+    <footer id="footer">
+        <div class="container social-footer-wrappper">
+            <div class="row d-flex justify-content-center">
+                <a class="mr-3" href="https://github.com/Omsoni06" target="_blank">
+                    <i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/omsoni06/" target="_blank">
+                    <i class="fab fa-linkedin"></i></a>
+                <a class="ml-3" href="https://leetcode.com/omsonii06/" target="_blank">
+                    <i class="fa fa-code"></i></a>
+                <a class="ml-3" href="https://www.instagram.com/om__5911/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="ml-3" href="https://stackoverflow.com/users/15150189/om-soni" target="_blank">
+                    <i class="fab fa-stack-overflow"></i>
+                </a>
+
+                <br>
+            </div>
+            <div class="row d-flex justify-content-center med-text p-2 mt-1">
+                <a href="https://undraw.co/" target="_blank">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>Illustrations by unDraw</span>
+                </a>
+            </div>
+        </div>
+
+        <p class="copyright-stamp">
+            ©2020-2023 Om soni - All Rights Reserved<br></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.rings.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+        integrity="sha384-qvCpZRx6XHsdywV3EzK3NsnJrhNRt93DpAhT8cjE7UUJWOT0ucBWbMLiHMgxeDUF"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/constants.js"></script>
+    <script src="./assets/js/util.js"></script>
+    <script src="./assets/js/projects.js"></script>
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/about.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/download.js"></script>
+</body>
+
+</html>

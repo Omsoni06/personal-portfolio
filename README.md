@@ -1,4 +1,4 @@
-
+#LIVE on github pages :  https://omsoni06.github.io/personal-portfolio/
 ![portfolioimg](https://github.com/Omsoni06/personal-portfolio/assets/92720665/0f747e88-3bfd-4176-a89e-1a1f7f28e129)
 
 ## Description

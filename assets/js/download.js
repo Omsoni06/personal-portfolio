@@ -3,11 +3,12 @@
 
  
 function enableResumeDownloadButton() {
-    downloadPageRecaptchaValidated = true;
+   
     $('#resume--download-icon').removeClass('fas fa-window-close');
     $('#resume--download-icon').addClass('fas fa-download');
 
-    $('#resume--download-link').prop('href', "assets/img/final.pdf");
+    $('#resume--download-link').addClass('download--image')
+    $('#resume--download-link').prop('href', "assets/img/OM-SONI_MERNDEV.pdf");
     $('#resume--download-link').prop('download', "HarryDulaneyResume");
 
 }
@@ -15,12 +16,12 @@ function enableResumeDownloadButton() {
 /**
  * Disable the resume download button
  */
-// function disableResumeDownloadButton() {
-//     downloadPageRecaptchaValidated = false;
-//     $('#resume--download-icon').removeClass('fas fa-download');
-//     $('#resume--download-icon').addClass('fas fa-window-close');
+ function disableResumeDownloadButton() {
+     downloadPageRecaptchaValidated = false;
+     $('#resume--download-icon').removeClass('fas fa-download');
+     $('#resume--download-icon').addClass('fas fa-window-close');
 
-//     $('#resume--download-link').prop('disabled', true);
-//     $('#resume--download-link').prop('href', "#");
-//     $('#resume--download-link').prop('download', undefined);
-// }
+     $('#resume--download-link').prop('disabled', true);
+     $('#resume--download-link').prop('href', "#");
+     $('#resume--download-link').prop('download', undefined);
+ }

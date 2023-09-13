@@ -8,7 +8,7 @@ function enableResumeDownloadButton() {
     $('#resume--download-icon').addClass('fas fa-download');
 
     $('#resume--download-link').addClass('download--image')
-    $('#resume--download-link').prop('href', "assets/img/OM-SONI_MERNDEV.pdf");
+    $('#resume--download-link').prop('href', "assets/img/Omsoni-NextJS.pdf");
     $('#resume--download-link').prop('download', "HarryDulaneyResume");
 
 }
